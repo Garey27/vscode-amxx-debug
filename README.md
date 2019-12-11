@@ -3,7 +3,11 @@
 This is a debug adapter for Amxx Pawn language which allows for remote debugging of scripts. It requires specific setup on
 application side. (https://github.com/Garey27/amxx-debugger-server)
 
-## Build and Run
+## Install from marketplace
+
+* Search AmxxPawn Remote Debugger on marketplace, install, follow steps to install Amxx Deubgger server: https://github.com/Garey27/amxx-debugger-server
+
+## Building
 
 * Clone the project
 * Open the project folder in VS Code.
