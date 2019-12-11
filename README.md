@@ -5,7 +5,7 @@ application side. (https://github.com/Garey27/amxx-debugger-server)
 
 ## Install from marketplace
 
-* Search AmxxPawn Remote Debugger on marketplace, install, follow steps to install Amxx Deubgger server: https://github.com/Garey27/amxx-debugger-server
+* Search AmxxPawn Remote Debugger on marketplace, install, follow steps to install Amxx Debugger server: https://github.com/Garey27/amxx-debugger-server
 
 ## Building
 
