@@ -75,12 +75,12 @@
 							"remoteHost": {
 								"type": "string",
 								"description": "Remote host to which debugger attaches.",
-								"default": "127.0.01"
+								"default": "127.0.0.1"
 							},
 							"remotePort": {
 								"type": "string",
 								"description": "Remote port to which debugger attaches.",
-								"default": "55557"
+								"default": "1234"
 							},
 							"stopOnEntry": {
 								"type": "boolean",
