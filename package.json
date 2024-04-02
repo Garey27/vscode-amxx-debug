@@ -99,7 +99,7 @@
 					{
 						"type": "amxxpawn",
 						"request": "launch",
-						"name": "Run remote debugger",
+						"name": "[amxx-debug] Run remote debugger",
 						"program": "${workspaceFolder}/test"
 					}
 				],
@@ -110,7 +110,7 @@
 						"body": {
 							"type": "amxxpawn",
 							"request": "launch",
-							"name": "Run remote debugger",
+							"name": "[amxx-debug] Run remote debugger",
 							"program": "${workspaceFolder}/test"
 						}
 					}
