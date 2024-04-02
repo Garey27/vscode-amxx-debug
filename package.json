@@ -2,11 +2,11 @@
 	"name": "amxxpawn-remote-debug",
 	"displayName": "AmxxPawn Remote Debugger",
 	"version": "0.1.0",
-	"publisher": "noizex",
+	"publisher": "Garey27",
 	"description": "AmxxPawn remote debugger",
 	"author": {
-		"name": "Kamil Niechajewicz",
-		"email": "kamiln@gmail.com"
+		"name": "Garey27",
+		"email": "ak.garey@gmail.com"
 	},
 	"license": "MIT",
 	"keywords": [
