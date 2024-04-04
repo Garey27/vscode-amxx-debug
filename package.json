@@ -29,11 +29,9 @@
 		"url": "https://github.com/Garey27/vscode-amxx-debug/issues"
 	},
 	"scripts": {
-		"prepublish": "tsc -p ./src",
 		"compile": "tsc -p ./src",
 		"eslint": "eslint ./src/**/*.ts",
 		"watch": "tsc -w -p ./src",
-		"postinstall": "node ./node_modules/vscode/bin/install",
 		"package": "vsce package",
 		"publish": "vsce publish"
 	},
