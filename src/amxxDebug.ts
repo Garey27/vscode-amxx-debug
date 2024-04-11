@@ -10,11 +10,11 @@ import {
 	InitializedEvent, TerminatedEvent, StoppedEvent, BreakpointEvent,
 	ContinuedEvent, Variable,
 	Thread, StackFrame, Scope, Source, Handles,
-} from 'vscode-debugadapter';
-import { DebugProtocol } from 'vscode-debugprotocol';
+} from '@vscode/debugadapter';
+import { DebugProtocol } from '@vscode/debugprotocol';
 import { basename } from 'path';
 
-import * as amxx from './mockRuntime'
+import * as amxx from './amxxRuntime'
 
 const { Subject } = require('await-notify');
 
@@ -588,7 +588,7 @@ export class AmxModXDebugSession extends LoggingDebugSession
 	protected receiveStopped(msg : amxx.Message)
 	{
 		let Reason = msg.readString();
-		let Description = msg.readString();
+		//let Description = msg.readString();
 		let Text = msg.readString();
 
 		if(Text.length != 0 && Reason == 'exception')
@@ -669,9 +669,9 @@ export class AmxModXDebugSession extends LoggingDebugSession
 			}
 		}
 
-		let name = msg.readString();
+		//let name = msg.readString();
 		let value = msg.readString();
-		let type = msg.readString();
+		//let type = msg.readString();
 		let bHasMembers = msg.readBool();
 
 		if (this.waitingEvaluateRequests && this.waitingEvaluateRequests.length > 0)

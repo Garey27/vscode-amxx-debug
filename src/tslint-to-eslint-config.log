@@ -1,0 +1,4 @@
+1 ESLint rule behaves differently from its TSLint counterpart:
+  * @typescript-eslint/no-unused-expressions:
+    - The TSLint optional config "allow-new" is the default ESLint behavior and will no longer be ignored.
+

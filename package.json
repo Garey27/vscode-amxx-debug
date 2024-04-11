@@ -2,19 +2,19 @@
 	"name": "amxxpawn-remote-debug",
 	"displayName": "AmxxPawn Remote Debugger",
 	"version": "0.1.0",
-	"publisher": "noizex",
+	"publisher": "Garey27",
 	"description": "AmxxPawn remote debugger",
 	"author": {
-		"name": "Kamil Niechajewicz",
-		"email": "kamiln@gmail.com"
+		"name": "Garey27",
+		"email": "ak.garey@gmail.com"
 	},
 	"license": "MIT",
 	"keywords": [
 		"multi-root ready"
 	],
 	"engines": {
-		"vscode": "^1.33.0",
-		"node": "^10.15.1"
+		"vscode": "^1.87.0",
+		"node": "^21.7.1"
 	},
 	"icon": "images/mock-debug-icon.png",
 	"categories": [
@@ -23,39 +23,37 @@
 	"private": true,
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/noizex/vscode-angelscript-debug"
+		"url": "https://github.com/Garey27/vscode-amxx-debug.git"
 	},
 	"bugs": {
-		"url": "https://github.com/noizex/vscode-angelscript-debug/issues"
+		"url": "https://github.com/Garey27/vscode-amxx-debug/issues"
 	},
 	"scripts": {
-		"prepublish": "tsc -p ./src",
 		"compile": "tsc -p ./src",
-		"tslint": "tslint ./src/**/*.ts",
+		"eslint": "eslint ./src/**/*.ts",
 		"watch": "tsc -w -p ./src",
-		"test": "mocha -u tdd ./out/tests/",
-		"postinstall": "node ./node_modules/vscode/bin/install",
 		"package": "vsce package",
 		"publish": "vsce publish"
 	},
 	"dependencies": {
 		"await-notify": "1.0.1",
-		"vscode-debugadapter": "1.38.0-pre.1",
-		"vscode-debugprotocol": "1.37.0"
+		"@vscode/debugadapter": "1.65.0",
+		"@vscode/debugprotocol": "1.65.0"
 	},
 	"devDependencies": {
-		"@types/mocha": "2.2.48",
-		"@types/node": "7.0.55",
-		"mocha": "5.0.1",
-		"tslint": "5.9.1",
-		"typescript": "2.6.2",
-		"vsce": "1.37.5",
-		"vscode": "^1.1.36",
-		"vscode-debugadapter-testsupport": "1.32.0"
+		"@types/mocha": "10.0.6",
+		"@types/node": "20.12.2",
+		"mocha": "10.4.0",
+		"eslint": "8.57.0",
+		"typescript": "5.4.3",
+		"@vscode/vsce": "2.24.0",
+		"@types/vscode": "^1.87.0",
+		"@vscode/test-electron": "^2.3.9",
+		"@vscode/debugadapter-testsupport": "1.65.0"
 	},
 	"main": "./out/extension",
 	"activationEvents": [
-		"*"
+		"onDebug"
 	],
 	"contributes": {
 		"breakpoints": [
@@ -75,12 +73,12 @@
 							"remoteHost": {
 								"type": "string",
 								"description": "Remote host to which debugger attaches.",
-								"default": "127.0.01"
+								"default": "127.0.0.1"
 							},
 							"remotePort": {
-								"type": "string",
+								"type": "number",
 								"description": "Remote port to which debugger attaches.",
-								"default": "55557"
+								"default": "1234"
 							},
 							"stopOnEntry": {
 								"type": "boolean",
@@ -99,7 +97,7 @@
 					{
 						"type": "amxxpawn",
 						"request": "launch",
-						"name": "Run remote debugger",
+						"name": "[amxx-debug] Run remote debugger",
 						"program": "${workspaceFolder}/test"
 					}
 				],
@@ -110,7 +108,7 @@
 						"body": {
 							"type": "amxxpawn",
 							"request": "launch",
-							"name": "Run remote debugger",
+							"name": "[amxx-debug] Run remote debugger",
 							"program": "${workspaceFolder}/test"
 						}
 					}

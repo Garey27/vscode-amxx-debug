@@ -6,7 +6,7 @@
 
 import * as vscode from 'vscode';
 import { WorkspaceFolder, DebugConfiguration, ProviderResult, CancellationToken } from 'vscode';
-import { AmxModXDebugSession } from './mockDebug';
+import { AmxModXDebugSession } from './amxxDebug';
 import * as Net from 'net';
 
 /*
@@ -47,7 +47,10 @@ class AmxModXDebugConfigurationProvider implements vscode.DebugConfigurationProv
 				config.name = 'Launch';
 				config.request = 'launch';
 				config.program = 'test';
-				config.stopOnEntry = true;
+				config.stopOnEntry = false;
+				config.remoteHost = '127.0.0.1';
+				config.remotePort =  '1234';
+				config.trace = true;
 			}
 		}
 
